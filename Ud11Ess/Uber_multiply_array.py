@@ -10,7 +10,7 @@ and skip the one at the same index
 return the new array with the product at each index
 """
 def brute_force(A):
-    total = A.copy()
+    total = list(A)
     for i in range(len(A)):
         sum=1
         for j in range(len(A)):
@@ -27,7 +27,7 @@ Then we loop through it again and divide the sum by each element at the correspo
 we return the new index
 """
 def optimized(A):
-    total = A.copy()
+    total = list(A)
     mult=1
     for num in A:
         mult *=num
@@ -42,7 +42,7 @@ In this solution, we multiply what is left of i everytime we go through i, and j
 After each i, j has less length(m) to go through. making this algorithm better than the brute force 
 """
 def no_division(A):
-    total = A.copy()
+    total = list(A)
     left = 1
     for i in range(len(A)):
         right =1
